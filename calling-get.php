@@ -31,7 +31,7 @@
   foreach ($sql as $row) {
     //JSON形式にする
     $row_array['device_name'] = $row['device_name'];
-    $row_array['msg_no'] = $row['msg_no'];
+    $row_array['msg_no'] = strval($row['msg_no']);
 
     array_push($json_array,$row_array);
     // error_log(print_r($json_array, true));
