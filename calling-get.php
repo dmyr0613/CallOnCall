@@ -17,7 +17,7 @@
 
   //Callingからデバイス名指定またはALLでメッセージがあるか取得
   $sqlText   = 'select * from calling';
-  $sqlText  .= ' where (device_name = "All_Device"';
+  $sqlText  .= ' where (device_name = 'All_Device'';
   $sqlText  .= "    or  device_name = '" . $device_name . "')";
   $sqlText  .= '   and msg_no >= 1';
 
