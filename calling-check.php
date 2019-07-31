@@ -34,7 +34,8 @@ try{
       //locationテーブルへINSERT
       $sql=$pdo->prepare('insert into calling values(?, 0, "")');
       $sql->execute([
-        $_GET['device_name']);
+        $_GET['device_name']
+			]);
       error_log("callingデータ登録");
     }
     //DB接続情報をクリア
