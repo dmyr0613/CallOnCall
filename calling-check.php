@@ -32,9 +32,10 @@ try{
 
     if ($count == 0) {
       //locationテーブルへINSERT
-      $sql=$pdo->prepare('insert into calling values(?, 0, "")');
+      $sql=$pdo->prepare('insert into calling values(?, 0, ?)');
       $sql->execute([
-        $_GET['device_name']
+        $_GET['device_name'],
+				"TEST"
 			]);
       error_log("callingデータ登録");
     }
