@@ -21,7 +21,7 @@ try{
 
     //Callingにデバイス名のレコードがあるかチェック
     $sqlText   = 'update calling';
-		$sqlText  .= '   set msg_flg     = 0';
+		$sqlText  .= '   set msg_no      = 0';
     $sqlText  .= ' where device_name = ?';
 
     error_log(print_r($sqlText, true));
