@@ -32,7 +32,7 @@ try{
 
 	    $sql=$pdo->prepare($sqlText);
 	    $sql->execute([$msg_no,$device_name]);
-			error_log("calling.msg_flg=" . $msg_no . "デバイス名:" . $device_name);
+			error_log("calling.msg_flg=" . $msg_no . " デバイス名:" . $device_name);
 		} else {
 			//Callingにmsg_noをUPDATE 全デバイス
 	    $sqlText   = 'update calling';

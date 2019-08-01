@@ -27,8 +27,8 @@ try{
     error_log(print_r($sqlText, true));
 
     $sql=$pdo->prepare($sqlText);
-    $sql->execute([$_GET['device_name']]);
-		error_log("calling.msg_flgクリア");
+    $sql->execute([$device_name]);
+		error_log("calling.msg_flgクリア デバイス名:" . $device_name);
 
     //DB接続情報をクリア
     $pdo = null;
