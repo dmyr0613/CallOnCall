@@ -15,3 +15,7 @@ http://call-on-call.herokuapp.com/calling-get.php?device_name=dmyr-iPhone6s
 http://call-on-call.herokuapp.com/calling-clear.php?device_name=dmyr-iPhone6s
 --デバイス名の存在チェック
 http://call-on-call.herokuapp.com/calling-check.php?device_name=dmyr-iPhone6s
+--msg_noを更新 デバイス指定
+http://call-on-call.herokuapp.com/calling-check.php?device_name=dmyr-iPhone6s&msg_no=9
+--msg_noを更新 全デバイス
+http://call-on-call.herokuapp.com/calling-check.php?device_name=&msg_no=9
