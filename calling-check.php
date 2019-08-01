@@ -26,7 +26,7 @@ try{
     error_log(print_r($sqlText, true));
 
     $sql=$pdo->prepare($sqlText);
-    $sql->execute([$_GET['device_name']]);
+    $sql->execute([$device_name]);
     $count = $sql->rowCount();
 
 
@@ -34,10 +34,10 @@ try{
       //locationテーブルへINSERT
       $sql=$pdo->prepare('insert into calling values(?, 0, ?)');
       $sql->execute([
-        $_GET['device_name'],
-				"TEST"
+        $device_name,
+				$device_name
 			]);
-      error_log("callingデータ登録");
+      error_log("callingデータ登録 デバイス名:" . $device_name);
     }
     //DB接続情報をクリア
     $pdo = null;
