@@ -13,15 +13,14 @@
 					<?php
 
           if (!empty($_REQUEST)) {
-            //引数でLINE_IDを取得
 						$obj = $_REQUEST;
 						foreach ($obj as $key => $val){
 							error_log($key);
 
-							echo($key);
-							echo($_REQUEST['msg_no']);
-							echo($key['msg_no']);
-							echo($val['msg_no']);
+							// echo($key);
+							// echo($_REQUEST['msg_no']);
+							// echo($key['msg_no']);
+							// echo($val['msg_no']);
 
 							if (substr_count($key, 'msg_no_') == 1) {
 								//文字列にline_idが含まれる場合
