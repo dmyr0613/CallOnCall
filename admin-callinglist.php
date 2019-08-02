@@ -16,14 +16,14 @@
 						$sql=$pdo->prepare('select * from calling order by device_name');
 						$sql->execute();
 
-						echo '<form action="admin-callinglist.php" method="post">';				//送信用のpost
+						echo '<form action="admin-callingsend.php" method="post">';				//送信用のpost
 						echo '<table>';
 						echo '<th>デバイス名</th><th>メッセージNo</th><th>コメント</th>';
 						foreach ($sql as $row) {
 							echo '<tr>';
 							echo '<td>', $row['device_name'], '</td>';
 							// echo '<td>', $row['msg_no'], '</td>';
-							echo '<td><input type="number" name="name" value="', $row['msg_no'], '"></td>';
+							echo '<td><input type="number" name="msg_no" value="', $row['msg_no'], '"></td>';
 							echo '<td>', $row['comment'], '</td>';
 						}
 						echo '</table>';
