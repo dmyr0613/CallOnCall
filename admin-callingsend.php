@@ -21,15 +21,16 @@
 							echo($key);
 							echo($_REQUEST['msg_no']);
 							echo($key['msg_no']);
+							echo($val['msg_no']);
 
-							if (substr_count($key, 'msg_no') > 0) {
+							if ($_REQUEST['msg_no'] > 0) {
 								//文字列にphone_noが含まれる場合
 								// $key = substr($key, 9);	//PhoneNoアドレスを抜き取ります。
 								// error_log($key);
 
 								// $options = '{"contacts": [{ "phone_number": "09076114485" }], "text_message": "' . $message2 . '" }';
 								// $options = '{"contacts": [{ "phone_number": "' . $key . '" }], "text_message": "' . $message2 . '" }';
-								$url = "http://call-on-call.herokuapp.com/calling-set.php?device_name=dmyr-iPhone6s&msg_no=9";
+								$url = "http://call-on-call.herokuapp.com/calling-set.php?device_name=dmyr-iPhone6s&msg_no=" . $_REQUEST['msg_no'];
 								$ch = curl_init();
 								curl_setopt($ch, CURLOPT_URL, $url);
 								// curl_setopt($ch, CURLOPT_HTTPHEADER, array('token: ', 'Content-Type: application/json'));
