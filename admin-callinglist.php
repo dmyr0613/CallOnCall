@@ -23,7 +23,7 @@
 							echo '<tr>';
 							echo '<td>', $row['device_name'], '</td>';
 							// echo '<td>', $row['msg_no'], '</td>';
-							echo '<input type="text" name="name" value="', $row['msg_no'], '">';
+							echo '<td><input type="text" name="name" value="', $row['msg_no'], '"></td>';
 							echo '<td>', $row['comment'], '</td>';
 						}
 						echo '</table>';
