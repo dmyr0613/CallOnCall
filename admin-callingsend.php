@@ -23,10 +23,14 @@
 							echo($key['msg_no']);
 							echo($val['msg_no']);
 
-							if ($_REQUEST['msg_no'] > 0) {
-								//文字列にphone_noが含まれる場合
-								// $key = substr($key, 9);	//PhoneNoアドレスを抜き取ります。
-								// error_log($key);
+							if (substr_count($key, 'msg_no_') == 1) {
+								//文字列にline_idが含まれる場合
+								$device_name = substr($key, 7);	//デバイス名を抜き取る。
+								error_log($device_name);
+
+								echo($device_name);
+								echo($_REQUEST['msg_no_' . $device_name]);
+
 
 								// $options = '{"contacts": [{ "phone_number": "09076114485" }], "text_message": "' . $message2 . '" }';
 								// $options = '{"contacts": [{ "phone_number": "' . $key . '" }], "text_message": "' . $message2 . '" }';
