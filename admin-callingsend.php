@@ -17,7 +17,10 @@
 						$obj = $_REQUEST;
 						foreach ($obj as $key => $val){
 							error_log($key);
+
 							echo($key);
+							echo($_REQUEST['msg_no']);
+							echo($key['msg_no']);
 
 							if (substr_count($key, 'msg_no') > 0) {
 								//文字列にphone_noが含まれる場合
