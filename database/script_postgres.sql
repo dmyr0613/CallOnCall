@@ -9,6 +9,21 @@ insert into calling values('TEST', 0, 'TEST');
 
 update calling set msg_no = 1 where device_name = 'dmyr-iPhone6s';
 
+create table call_message (
+  msg_no int,
+  message varchar(100)
+);
+
+insert into call_message values(1, 'お米といで。３合。');
+insert into call_message values(2, '庭の草がぼうぼうだよ。');
+insert into call_message values(3, 'お風呂掃除して。');
+
+
+select * from calling a inner join call_message b
+    on a.device_name = dmyr-iPhone6s
+   and a.msg_no >= 1
+   and a.msg_no  = b.msg_no
+
 --デバイス名の存在チェック(なければINSERT)
 http://call-on-call.herokuapp.com/calling-check.php?device_name=dmyr-iPhone6s
 --msg_noの取得

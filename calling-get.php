@@ -16,9 +16,10 @@
   $device_name = $_GET['device_name'];
 
   //Callingからデバイス名指定またはALLでメッセージがあるか取得
-  $sqlText   = 'select * from calling';
-  $sqlText  .= " where device_name = '" . $device_name . "'";
-  $sqlText  .= '   and msg_no >= 1';
+  $sqlText   = 'select * from calling a inner join call_message b';
+  $sqlText  .= "    on a.device_name = '" . $device_name . "'";
+  $sqlText  .= '   and a.msg_no >= 1';
+  $sqlText  .= '   and a.msg_no  = b.msg_no';
 
   error_log(print_r($sqlText, true));
 
@@ -31,6 +32,7 @@
     //JSON形式にする
     $row_array['device_name'] = $row['device_name'];
     $row_array['msg_no'] = strval($row['msg_no']);
+    $row_array['message'] = strval($row['message']);
 
     array_push($json_array,$row_array);
     // error_log(print_r($json_array, true));
