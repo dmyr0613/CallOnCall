@@ -10,8 +10,8 @@
 										<h2>Menu</h2>
 									</header>
 									<ul>
-										<li><a href="admin-callinglist.php">呼び出し一覧 CallingList</a></li>
-										<li><a href="admin-beacon.php">メッセージマスタ Message Master</a></li>
+										<li><a href="admin-calling-list.php">呼び出し一覧 CallingList</a></li>
+										<li><a href="admin-msg-list.php">メッセージマスタ Message Master</a></li>
 									</ul>
 								</nav>
 

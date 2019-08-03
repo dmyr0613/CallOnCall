@@ -39,7 +39,7 @@
 
             echo '<p>メッセージNoを更新しました。</p>';
 						echo '<ul class="actions">';
-						echo '<li><a href="admin-callinglist.php" class="button big">戻る</a></li>';
+						echo '<li><a href="admin-calling-list.php" class="button big">戻る</a></li>';
 						echo '</ul>';
           }
 

@@ -16,13 +16,13 @@
 						$sql=$pdo->prepare('select * from calling order by device_name');
 						$sql->execute();
 
-						echo '<form action="admin-callingsend.php" method="post">';				//送信用のpost
+						echo '<form action="admin-calling-send.php" method="post">';				//送信用のpost
 						echo '<table>';
 						echo '<th>デバイス名</th><th>メッセージNo</th><th>コメント</th>';
 						foreach ($sql as $row) {
 							echo '<tr>';
 							echo '<td>', $row['device_name'], '</td>';
-							// echo '<td>', $row['msg_no'], '</td>';
+							// 一意にするため、nameにデバイス名を付加する。
 							echo '<td><input type="number" name="msg_no_' . $row['device_name'] . '" value="', $row['msg_no'], '"></td>';
 							echo '<td>', $row['comment'], '</td>';
 						}
