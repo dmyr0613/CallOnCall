@@ -24,12 +24,10 @@ try{
     $sqlText   = 'select * from call_message';
     $sqlText  .= ' where msg_no  = ?';
 
-    error_log(print_r($sqlText, true));
-
     $sql=$pdo->prepare($sqlText);
-    $sql->execute([$msg_no,$message]);
+    $sql->execute([$msg_no]);
     $count = $sql->rowCount();
-
+		error_log($count)
 
     if ($count == 0) {
       //データがない場合は、call_messageテーブルへINSERT

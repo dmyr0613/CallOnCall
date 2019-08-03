@@ -36,3 +36,5 @@ http://call-on-call.herokuapp.com/calling-set.php?device_name=&msg_no=9
 http://call-on-call.herokuapp.com/calling-clear.php?device_name=dmyr-iPhone6s
 --レコード削除
 http://call-on-call.herokuapp.com/calling-delete.php?device_name=test
+--call_message 
+http://call-on-call.herokuapp.com/calling-msg-check.php?msg_no=1&message=TEST
