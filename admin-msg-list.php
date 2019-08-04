@@ -16,7 +16,7 @@
 						$sql=$pdo->prepare('select * from call_message order by msg_no');
 						$sql->execute();
 
-						echo '<form action="admin-meg-send.php" method="post">';				//送信用のpost
+						echo '<form action="admin-msg-send.php" method="post">';				//送信用のpost
 						echo '<table>';
 						echo '<th>メッセージNo</th><th>メッセージ</th>';
 						foreach ($sql as $row) {
