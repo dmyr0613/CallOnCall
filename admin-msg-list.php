@@ -28,7 +28,10 @@
 							echo '<td><input type="text" name="msg_no_' . $msg_no . '" value="', $row['message'], '"></td>';
 						}
 						//追加用のレコード
-						echo '<td><input type="text" name="msg_no_' . $msg_no + 1 . '" value=""></td>';
+						$msg_no = $msg_no + 1;
+						echo '<tr>';
+						echo '<td>', $msg_no, '</td>';
+						echo '<td><input type="text" name="msg_no_' . $msg_no . '" value=""></td>';
 						echo '</table>';
 						echo '<input type="submit" class="button primary small" value="Register">';
 						echo '</form>';
