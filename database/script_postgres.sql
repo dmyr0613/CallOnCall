@@ -14,6 +14,7 @@ create table call_message (
   message varchar(100)
 );
 
+--メッセージ
 insert into call_message values(1, 'お米といで。３合。');
 insert into call_message values(2, '庭の草がぼうぼうだよ。');
 insert into call_message values(3, 'お風呂掃除して。');
@@ -36,5 +37,5 @@ http://call-on-call.herokuapp.com/calling-set.php?device_name=&msg_no=9
 http://call-on-call.herokuapp.com/calling-clear.php?device_name=dmyr-iPhone6s
 --レコード削除
 http://call-on-call.herokuapp.com/calling-delete.php?device_name=test
---call_message 
+--call_message
 http://call-on-call.herokuapp.com/calling-msg-check.php?msg_no=1&message=TEST
