@@ -24,7 +24,7 @@
 								$message = $_REQUEST['msg_no_' . $msg_no];
 								error_log($message);
 
-								if ($msg_no > 0 && $message!="") {
+								if ($msg_no > 0 && $message != "") {
 									error_log("メッセージ更新");
 									//webAPIにて、メッセージ更新チェック
 									$url = "http://call-on-call.herokuapp.com/calling-msg-check.php?msg_no=" . $msg_no . "&message=" . $message;

@@ -11,6 +11,7 @@
 				<!-- reserveMain -->
 				<section id="reserveMain">
 					<?php
+						$msg_no = 0;
 
 						// デバイス情報を取得する。
 						$sql=$pdo->prepare('select * from call_message order by msg_no');
@@ -20,11 +21,14 @@
 						echo '<table>';
 						echo '<th>メッセージNo</th><th>メッセージ</th>';
 						foreach ($sql as $row) {
+							$msg_no = $row['msg_no'];
 							echo '<tr>';
-							echo '<td>', $row['msg_no'], '</td>';
+							echo '<td>', $msg_no, '</td>';
 							// 一意にするため、nameにデバイス名を付加する。
-							echo '<td><input type="text" name="msg_no_' . $row['msg_no'] . '" value="', $row['message'], '"></td>';
+							echo '<td><input type="text" name="msg_no_' . $msg_no . '" value="', $row['message'], '"></td>';
 						}
+						//追加用のレコード
+						echo '<td><input type="text" name="msg_no_' . $msg_no + 1 . '" value=""></td>';
 						echo '</table>';
 						echo '<input type="submit" class="button primary small" value="Register">';
 						echo '</form>';
