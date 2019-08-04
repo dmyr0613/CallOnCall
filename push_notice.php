@@ -1,5 +1,5 @@
 <?php
-$deviceToken = '************';
+$deviceToken = 'abcdef';
 
 // 送信する文字列
 $alert = 'Push test.';
