@@ -1,4 +1,5 @@
 <?php
+  //デバイス名から送信するメッセージがあるか取得する。
 
   //Heroku PostgresSQL
   $dsn = 'pgsql:dbname=d13p6kmhdcirvm host=ec2-174-129-208-118.compute-1.amazonaws.com port=5432';

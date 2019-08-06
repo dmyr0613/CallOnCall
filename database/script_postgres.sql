@@ -1,13 +1,14 @@
 create table calling (
   device_name varchar(50) not null,
   msg_no int,
-  comment varchar(100)
+  comment varchar(100),
+  token varchar(100)
 );
 
-insert into calling values('dmyr-iPhone6s', 0, 'DaisukeOta');
-insert into calling values('TEST', 0, 'TEST');
+insert into calling values('dmyr-iPhone6s', 0, 'DaisukeOta', '851fd0ba8b728b47d765f2d2bc90140474d5bb0c945606734c5e07d8dd40abc0');
+insert into calling values('TEST', 0, 'TEST', '12345');
 
-update calling set msg_no = 1 where device_name = 'dmyr-iPhone6s';
+update calling set msg_no = 1 where device_name = 'dmyr-iPhone6ss';
 
 create table call_message (
   msg_no int,

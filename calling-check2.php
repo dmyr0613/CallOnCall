@@ -1,5 +1,5 @@
 <?php
-	//指定したデバイス名のレコードがCallingテーブルにあるかチェックし、なければINSERT
+	//指定したデバイス名のレコードがCallingテーブルにあるかチェックし、なければINSERT。さらにTokenのチェックを行い、異なればUPDATE。
 
 try{
 
@@ -17,8 +17,9 @@ try{
       error_log("接続に成功しました。");
     }
 
-    //デバイス名を取得
+    //デバイス名、TOKENを取得
     $device_name = $_GET['device_name'];
+		$token = $_GET['token'];
 
     //Callingにデバイス名のレコードがあるかチェック
     $sqlText   = 'select * from calling';
@@ -33,13 +34,30 @@ try{
 
     if ($count == 0) {
       //locationテーブルへINSERT
-      $sql=$pdo->prepare('insert into calling values(?, 0, ?, '12345')');
+      $sql=$pdo->prepare('insert into calling values(?, 0, ?, ?)');
       $sql->execute([
         $device_name,
-				$device_name
+				$device_name,
+				$token
 			]);
       error_log("callingデータ登録 デバイス名:" . $device_name);
-    }
+    } else {
+			foreach ($sql as $row) {
+		    //データが同じかチェック
+				if (strval($row['token']) != $token) {
+					//異なった場合だけUPDATE
+					$sqlText   = 'update calling';
+					$sqlText  .= '   set token        = ?';
+					$sqlText  .= ' where device_name  = ?';
+
+					$sql=$pdo->prepare($sqlText);
+					$sql->execute([$token,$device_name]);
+					$count = $sql->rowCount();
+					error_log("tokenデータ更新 デバイス名:" . $device_name);
+				}
+		  }
+
+		}
     //DB接続情報をクリア
     $pdo = null;
   }
