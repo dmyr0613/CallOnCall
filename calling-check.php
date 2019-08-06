@@ -33,10 +33,11 @@ try{
 
     if ($count == 0) {
       //locationテーブルへINSERT
-      $sql=$pdo->prepare('insert into calling values(?, 0, ?, '12345')');
+      $sql=$pdo->prepare('insert into calling values(?, 0, ?, ?)');
       $sql->execute([
         $device_name,
-				$device_name
+				$device_name,
+				"12345"
 			]);
       error_log("callingデータ登録 デバイス名:" . $device_name);
     }

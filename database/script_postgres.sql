@@ -28,6 +28,8 @@ select * from calling a inner join call_message b
 
 --デバイス名の存在チェック(なければINSERT)
 http://call-on-call.herokuapp.com/calling-check.php?device_name=dmyr-iPhone6s
+--デバイス名の存在チェック2(なければINSERT。Tokenが異なればUPDATE)
+http://call-on-call.herokuapp.com/calling-check2.php?device_name=dmyr-iPhone6s&token=851fd0ba8b728b47d765f2d2bc90140474d5bb0c945606734c5e07d8dd40abc0
 --msg_noの取得
 http://call-on-call.herokuapp.com/calling-get.php?device_name=dmyr-iPhone6s
 --msg_noを更新 デバイス指定
