@@ -45,3 +45,5 @@ http://call-on-call.herokuapp.com/calling-msg-check.php?msg_no=1&message=TEST
 
 --プッシュ通知
 http://call-on-call.herokuapp.com/push_calling.php?token=851fd0ba8b728b47d765f2d2bc90140474d5bb0c945606734c5e07d8dd40abc0&msg_no=1&message=TEST
+--プッシュ通知ALL
+http://call-on-call.herokuapp.com/calling-push-all.php

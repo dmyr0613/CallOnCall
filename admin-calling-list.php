@@ -46,6 +46,15 @@
 
 	// 繰り返し処理の中身
 	function showPassage() {
+
+		//WebAPIを呼び出し（プッシュ通知ALL）
+		var request = new XMLHttpRequest();
+		request.open('GET', 'http://call-on-call.herokuapp.com/calling-push-all.php', true);
+		request.onload = function () {
+			//
+		};
+		request.send();
+
 	   PassSec++;   // カウントアップ
 	   var msg = "ボタンを押してから " + PassSec + "秒が経過しました。";   // 表示文作成
 	   document.getElementById("PassageArea").innerHTML = msg;   // 表示更新
