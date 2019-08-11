@@ -29,9 +29,9 @@
 						echo '</table>';
 						echo '<input type="submit" class="button primary small" value="Register">';
 						echo '</form>';
-						echo '<input type="button" value="カウント開始" id="startcount" onclick="startShowing();">';
-				    echo '<input type="button" value="カウント停止" id="endcount" onclick="stopShowing();">';
-						echo '<p id="PassageArea">(ここにカウントが表示されます)</p>';
+						echo '<p><input type="button" value="メッセージPUSH送信開始" id="startcount" onclick="startShowing();"></p>';
+				    echo '<p><input type="button" value="停止" id="endcount" onclick="stopShowing();"></p>';
+						echo '<p id="PassageArea">(カウントを表示します)</p>';
 					?>
 				</section>
 
@@ -56,7 +56,7 @@
 		request.send();
 
 	   PassSec++;   // カウントアップ
-	   var msg = "ボタンを押してから " + PassSec + "秒が経過しました。";   // 表示文作成
+	   var msg = "送信ボタンを押してから " + PassSec + "秒が経過しました。";   // 表示文作成
 	   document.getElementById("PassageArea").innerHTML = msg;   // 表示更新
 	}
 
