@@ -43,6 +43,11 @@
 						echo '</ul>';
           }
 
+					// タイマーを作り、2 秒後に起動します
+					$w1 = new EvTimer(2, 0, function () {
+					    echo "2 seconds elapsed\n";
+					});
+					
 					// タイマーを作って 2 秒後に起動させ、その後は
 					// 手で止めるまで 1 秒おきに繰り返します
 					$w2 = new EvTimer(2, 1, function ($w) {
