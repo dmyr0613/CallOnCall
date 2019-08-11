@@ -29,8 +29,11 @@
 						echo '</table>';
 						echo '<input type="submit" class="button primary small" value="Register">';
 						echo '</form>';
-						echo '<p><input type="button" value="メッセージPUSH送信開始" id="startcount" onclick="startShowing();"></p>';
-				    echo '<p><input type="button" value="停止" id="endcount" onclick="stopShowing();"></p>';
+						echo '<p>';
+						echo '<input type="button" value="メッセージPUSH送信開始" id="startcount" onclick="startShowing();">';
+						echo '　';
+				    echo '<input type="button" value="停止" id="endcount" onclick="stopShowing();">';
+						echo '</p>';
 						echo '<p id="PassageArea">(カウントを表示します)</p>';
 					?>
 				</section>
