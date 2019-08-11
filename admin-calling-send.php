@@ -43,6 +43,18 @@
 						echo '</ul>';
           }
 
+					// タイマーを作って 2 秒後に起動させ、その後は
+					// 手で止めるまで 1 秒おきに繰り返します
+					$w2 = new EvTimer(2, 1, function ($w) {
+					    echo "is called every second, is launched after 2 seconds\n";
+					    echo "iteration = ", Ev::iteration(), PHP_EOL;
+
+					    // 5 回繰り返したあとでウォッチャーを止めます
+					    Ev::iteration() == 5 and $w->stop();
+					    // Stop the watcher if further calls cause more than 10 iterations
+					    Ev::iteration() >= 10 and $w->stop();
+					});
+
 					?>
 				</section>
 

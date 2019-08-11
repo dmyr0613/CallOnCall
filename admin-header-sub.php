@@ -1,7 +1,7 @@
 
 			<!-- Header -->
 				<header id="header">
-					<a href="admin-callinglist.php" class="logo"><strong>Call On Call</strong> Staff Calling System</a>
+					<a href="admin-callinglist.php" class="logo"><strong>Call On Call</strong> Staff Call and Notification System</a>
 					<ul class="icons">
 						<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
 						<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
