@@ -14,11 +14,14 @@ try{
     $alert = $_GET['message'];
 
     // バッジ
-    $badge = 1;
+    $badge = 0;
 
     $body = array();
     $body['aps'] = array( 'alert' => $alert );
     $body['aps']['badge'] = $badge;
+		$body['aps']['sound'] = 'default';
+		$body['image-url'] = 'http://call-on-call.herokuapp.com/images/icon60_1.png';
+
 
     // SSL証明書
     $cert = 'CallOnCall_develop.pem';
