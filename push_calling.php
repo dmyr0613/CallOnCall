@@ -18,8 +18,10 @@ try{
 
     $body = array();
     $body['aps'] = array( 'alert' => $alert );
-    $body['aps']['badge'] = $badge;
+    // $body['aps']['badge'] = $badge;
 		$body['aps']['sound'] = 'default';
+		$body['aps']['badge'] = 1;
+		$body['aps']['mutable-content'] = 1;
 		$body['image-url'] = 'http://call-on-call.herokuapp.com/images/icon60_1.png';
 
 

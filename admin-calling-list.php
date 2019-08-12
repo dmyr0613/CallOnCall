@@ -59,7 +59,7 @@
 		request.send();
 
 	   PassSec++;   // カウントアップ
-	   var msg = "送信ボタンを押してから " + PassSec + "秒が経過しました。";   // 表示文作成
+	   var msg = "送信ボタンを押してから " + PassSec + "回 送信しました。";   // 表示文作成
 	   document.getElementById("PassageArea").innerHTML = msg;   // 表示更新
 	}
 
