@@ -29,8 +29,8 @@ try{
     // $cert = 'CallOnCall_develop.pem';
 		$cert = 'CallOnCall_dist.pem';
 
-    // $url = 'ssl://gateway.sandbox.push.apple.com:2195'; // 開発用
-    $url = 'ssl://gateway.push.apple.com:2195'; // 本番用
+    $url = 'ssl://gateway.sandbox.push.apple.com:2195'; // 開発用
+    // $url = 'ssl://gateway.push.apple.com:2195'; // 本番用
 
     $context = stream_context_create();
     stream_context_set_option( $context, 'ssl', 'local_cert', $cert );
