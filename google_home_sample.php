@@ -16,7 +16,7 @@ if($update["queryResult"]["action"] == "getDate"){
 }
 // default Welcome Intent用（blog参照）
 if($update["queryResult"]["action"] == "getWelcome"){
-  $speech_txt   = "いらっしゃいませ";
+  $speech_txt   = "必要に応じて番号を発言してください。";
   processMessage($update,$speech_txt);
 }
 // 返信用Json
