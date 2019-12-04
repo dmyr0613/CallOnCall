@@ -24,7 +24,7 @@
 							$msg_no = $row['msg_no'];
 							echo '<tr>';
 							echo '<td>', $msg_no, '</td>';
-							// 一意にするため、nameにデバイス名を付加する。
+							// 一意にするため、nameにデバイス名を付加する。　
 							echo '<td><input type="text" name="msg_no_' . $msg_no . '" value="', $row['message'], '"></td>';
 						}
 						//追加用のレコード
