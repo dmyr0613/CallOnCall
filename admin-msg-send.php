@@ -27,7 +27,7 @@
 								if ($msg_no > 0 && $message != "") {
 									error_log("メッセージ更新");
 									//webAPIにて、メッセージ更新チェック
-									$url = "http://call-on-call.herokuapp.com/calling-msg-check.php?msg_no=" . $msg_no . "&message=" . $message;
+									$url = "http://calloncall.herokuapp.com/calling-msg-check.php?msg_no=" . $msg_no . "&message=" . $message;
 									$ch = curl_init();
 									curl_setopt($ch, CURLOPT_URL, $url);
 

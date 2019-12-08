@@ -52,7 +52,7 @@
 
 		//WebAPIを呼び出し（プッシュ通知ALL）
 		var request = new XMLHttpRequest();
-		request.open('GET', 'http://call-on-call.herokuapp.com/calling-push-all.php', true);
+		request.open('GET', 'http://calloncall.herokuapp.com/calling-push-all.php', true);
 		request.onload = function () {
 			//
 		};

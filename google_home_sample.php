@@ -22,8 +22,8 @@ if($update["queryResult"]["action"] == "getMsgNo"){
     $speech_txt = $msg_no . "番を送信しました。";
 
     //meg_noの指定がある場合は、webAPIにて、メッセージNoを更新する。
-    // $url = "http://call-on-call.herokuapp.com/calling-set.php?device_name=dmyr-iPhone6s&msg_no=" . $msg_no;
-    $url = "http://call-on-call.herokuapp.com/calling-set.php?device_name=&msg_no=" . $msg_no;
+    // $url = "http://calloncall.herokuapp.com/calling-set.php?device_name=dmyr-iPhone6s&msg_no=" . $msg_no;
+    $url = "http://calloncall.herokuapp.com/calling-set.php?device_name=&msg_no=" . $msg_no;
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_URL, $url);
 

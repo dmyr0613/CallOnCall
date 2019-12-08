@@ -39,25 +39,25 @@ select * from calling a inner join call_message b
    and a.msg_no  = b.msg_no
 
 --デバイス名の存在チェック(なければINSERT)
-http://call-on-call.herokuapp.com/calling-check.php?device_name=dmyr-iPhone6s
+http://calloncall.herokuapp.com/calling-check.php?device_name=dmyr-iPhone6s
 --デバイス名の存在チェック2(なければINSERT。Tokenが異なればUPDATE)
-http://call-on-call.herokuapp.com/calling-check2.php?device_name=dmyr-iPhone6s&token=851fd0ba8b728b47d765f2d2bc90140474d5bb0c945606734c5e07d8dd40abc0
-http://call-on-call.herokuapp.com/calling-check2.php?device_name=generic_x86&token=cy9m7eDXFjo:APA91bHnGBIi1Zv6VlsRn1u2LF4a0OMzhIbfnnfZe1s49durSSLuasOj8cBQLWUcl9voza_Lviy3WTy-D6njbu-wJOPzbMo_uYWp7OKtXTJBO8SsagZCP8O5goY4Oxamqzsy5aCZIjOe
+http://calloncall.herokuapp.com/calling-check2.php?device_name=dmyr-iPhone6s&token=851fd0ba8b728b47d765f2d2bc90140474d5bb0c945606734c5e07d8dd40abc0
+http://calloncall.herokuapp.com/calling-check2.php?device_name=generic_x86&token=cy9m7eDXFjo:APA91bHnGBIi1Zv6VlsRn1u2LF4a0OMzhIbfnnfZe1s49durSSLuasOj8cBQLWUcl9voza_Lviy3WTy-D6njbu-wJOPzbMo_uYWp7OKtXTJBO8SsagZCP8O5goY4Oxamqzsy5aCZIjOe
 --msg_noの取得
-http://call-on-call.herokuapp.com/calling-get.php?device_name=dmyr-iPhone6s
+http://calloncall.herokuapp.com/calling-get.php?device_name=dmyr-iPhone6s
 --msg_noを更新 デバイス指定
-http://call-on-call.herokuapp.com/calling-set.php?device_name=dmyr-iPhone6s&msg_no=9
-http://call-on-call.herokuapp.com/calling-set.php?device_name=acer_T02&msg_no=1
+http://calloncall.herokuapp.com/calling-set.php?device_name=dmyr-iPhone6s&msg_no=9
+http://calloncall.herokuapp.com/calling-set.php?device_name=acer_T02&msg_no=1
 --msg_noを更新 全デバイス
-http://call-on-call.herokuapp.com/calling-set.php?device_name=&msg_no=9
+http://calloncall.herokuapp.com/calling-set.php?device_name=&msg_no=9
 --msg_noのクリア
-http://call-on-call.herokuapp.com/calling-clear.php?device_name=dmyr-iPhone6s
+http://calloncall.herokuapp.com/calling-clear.php?device_name=dmyr-iPhone6s
 --レコード削除
-http://call-on-call.herokuapp.com/calling-delete.php?device_name=test
+http://calloncall.herokuapp.com/calling-delete.php?device_name=test
 --call_message
-http://call-on-call.herokuapp.com/calling-msg-check.php?msg_no=1&message=TEST
+http://calloncall.herokuapp.com/calling-msg-check.php?msg_no=1&message=TEST
 
 --プッシュ通知
-http://call-on-call.herokuapp.com/push_calling.php?token=851fd0ba8b728b47d765f2d2bc90140474d5bb0c945606734c5e07d8dd40abc0&msg_no=1&message=TEST
+http://calloncall.herokuapp.com/push_calling.php?token=851fd0ba8b728b47d765f2d2bc90140474d5bb0c945606734c5e07d8dd40abc0&msg_no=1&message=TEST
 --プッシュ通知ALL
-http://call-on-call.herokuapp.com/calling-push-all.php
+http://calloncall.herokuapp.com/calling-push-all.php

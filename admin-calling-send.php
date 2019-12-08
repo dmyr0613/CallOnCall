@@ -26,7 +26,7 @@
 
 								if ($msg_no > 0) {
 									//meg_noの指定がある場合は、webAPIにて、メッセージNoを更新する。
-									$url = "http://call-on-call.herokuapp.com/calling-set.php?device_name=" . $device_name . "&msg_no=" . $msg_no;
+									$url = "http://calloncall.herokuapp.com/calling-set.php?device_name=" . $device_name . "&msg_no=" . $msg_no;
 									$ch = curl_init();
 									curl_setopt($ch, CURLOPT_URL, $url);
 
