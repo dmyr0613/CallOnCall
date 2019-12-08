@@ -19,9 +19,16 @@ create table call_message (
 );
 
 --メッセージ
-insert into call_message values(1, 'お米といで。３合。');
-insert into call_message values(2, '庭の草がぼうぼうだよ。');
-insert into call_message values(3, 'お風呂掃除して。');
+insert into call_message values(1, 'メッセージNo01：A部品が不足しました。');
+insert into call_message values(2, 'メッセージNo02：B部品が不足しました。');
+insert into call_message values(3, 'メッセージNo03：C部品が不足しました。');
+insert into call_message values(4, 'メッセージNo04：D部品が不足しました。');
+insert into call_message values(5, 'メッセージNo05：E部品が不足しました。');
+insert into call_message values(101, 'アラートNo01：機器Aにてエラーが発生しました。');
+insert into call_message values(102, 'アラートNo02：機器Bにてエラーが発生しました。');
+insert into call_message values(103, 'アラートNo03：機器Cにてエラーが発生しました。');
+insert into call_message values(104, 'アラートNo04：機器Dにてエラーが発生しました。');
+insert into call_message values(105, 'アラートNo05：機器Eにてエラーが発生しました。');
 
 update call_message set message = 'ＢＢＡ' where msg_no = 1;
 
