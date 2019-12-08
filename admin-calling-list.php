@@ -23,18 +23,18 @@
 							echo '<tr>';
 							echo '<td>', $row['device_name'], '</td>';
 							// 一意にするため、nameにデバイス名を付加する。
-							echo '<td><input type="number" name="msg_no_' . $row['device_name'] . '" value="', $row['msg_no'], '"></td>';
+							echo '<td><input type="number" name="msg_no_' . $row['device_name'] . '" value="', $row['msg_no'], '" class="input_number_only"></td>';
 							echo '<td>', $row['comment'], '</td>';
 						}
 						echo '</table>';
 						echo '<input type="submit" class="button primary small" value="Register">';
 						echo '</form>';
-						echo '<p>';
-						echo '<input type="button" value="メッセージPUSH送信開始" id="startcount" onclick="startShowing();">';
-						echo '　';
-				    echo '<input type="button" value="停止" id="endcount" onclick="stopShowing();">';
-						echo '</p>';
-						echo '<p id="PassageArea">(カウントを表示します)</p>';
+						// echo '<p>';
+						// echo '<input type="button" value="メッセージPUSH送信開始" id="startcount" onclick="startShowing();">';
+						// echo '　';
+				    // echo '<input type="button" value="停止" id="endcount" onclick="stopShowing();">';
+						// echo '</p>';
+						// echo '<p id="PassageArea">(カウントを表示します)</p>';
 					?>
 				</section>
 

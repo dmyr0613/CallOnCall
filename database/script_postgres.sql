@@ -30,7 +30,11 @@ insert into call_message values(103, 'アラートNo03：機器Cにてエラー�
 insert into call_message values(104, 'アラートNo04：機器Dにてエラーが発生しました。');
 insert into call_message values(105, 'アラートNo05：機器Eにてエラーが発生しました。');
 
-update call_message set message = 'ＢＢＡ' where msg_no = 1;
+update call_message set message = '★★★アラートNo01★★★' || chr(10) || '機器Aにてエラーが発生しました。' where msg_no = 101;
+update call_message set message = '★★★アラートNo02★★★' || chr(10) || '機器Bにてエラーが発生しました。' where msg_no = 102;
+update call_message set message = '★★★アラートNo03★★★' || chr(10) || '機器Cにてエラーが発生しました。' where msg_no = 103;
+update call_message set message = '★★★アラートNo04★★★' || chr(10) || '機器Dにてエラーが発生しました。' where msg_no = 104;
+update call_message set message = '★★★アラートNo05★★★' || chr(10) || '機器Eにてエラーが発生しました。' where msg_no = 105;
 
 
 select * from calling a inner join call_message b
