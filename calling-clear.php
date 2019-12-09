@@ -35,6 +35,19 @@ try{
     $sql->execute([$device_name]);
 		error_log("calling.msg_flgクリア デバイス名:" . $device_name);
 
+		//ログテーブルに確認時間を更新
+		date_default_timezone_set('Asia/Tokyo');
+		$datetime = date("Y/m/d His");
+
+		$sqlText   = 'update calling_log';
+		$sqlText  .= '       update_datetime = ?,';
+		$sqlText  .= '       device_name     = ? ';
+    $sqlText  .= ' where update_datetime is null';
+    error_log(print_r($sqlText, true));
+    $sql=$pdo->prepare($sqlText);
+    $sql->execute([$datetime, $device_name]);
+		error_log("ログテーブルに確認時間を更新");
+
     //DB接続情報をクリア
     $pdo = null;
   }
