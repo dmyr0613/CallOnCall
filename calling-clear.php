@@ -42,7 +42,7 @@ try{
 		$sqlText   = 'update calling_log';
 		$sqlText  .= '   set update_datetime = ?,';
 		$sqlText  .= '       device_name     = ? ';
-    $sqlText  .= ' where update_datetime is null';
+    $sqlText  .= ' where kakunin_flg     = 0 ';
     error_log(print_r($sqlText, true));
     $sql=$pdo->prepare($sqlText);
     $sql->execute([$datetime, $device_name]);

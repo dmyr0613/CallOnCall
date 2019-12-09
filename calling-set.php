@@ -60,7 +60,7 @@ try{
 			null,
 			$device_name,
 			$msg_no,
-			null]);
+			0]);
 		error_log("ログテーブルに書き込み");
 
     //DB接続情報をクリア

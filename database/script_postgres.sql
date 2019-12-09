@@ -42,7 +42,7 @@ create table calling_log (
   update_datetime timestamp,
   device_name varchar(50) not null,
   msg_no int,
-  alram_flg int
+  kakunin_flg int
 );
 
 
