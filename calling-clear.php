@@ -40,7 +40,7 @@ try{
 		$datetime = date("Y/m/d His");
 
 		$sqlText   = 'update calling_log';
-		$sqlText  .= '       update_datetime = ?,';
+		$sqlText  .= '   set update_datetime = ?,';
 		$sqlText  .= '       device_name     = ? ';
     $sqlText  .= ' where update_datetime is null';
     error_log(print_r($sqlText, true));
