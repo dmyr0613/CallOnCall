@@ -36,6 +36,15 @@ update call_message set message = '★★★アラートNo03★★★' || chr(10
 update call_message set message = '★★★アラートNo04★★★' || chr(10) || '機器Dにてエラーが発生しました。' where msg_no = 104;
 update call_message set message = '★★★アラートNo05★★★' || chr(10) || '機器Eにてエラーが発生しました。' where msg_no = 105;
 
+--LOGテーブル
+create table calling_log (
+  insert_datetime timestamp,
+  update_datetime timestamp,
+  device_name varchar(50) not null,
+  msg_no int,
+  alram_flg int
+);
+
 
 select * from calling a inner join call_message b
     on a.device_name = dmyr-iPhone6s

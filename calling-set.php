@@ -50,6 +50,19 @@ try{
 			error_log("calling.msg_flg=" . $msg_no);
 		}
 
+		//ログテーブルに書き込み
+		date_default_timezone_set('Asia/Tokyo');
+		$datetime = date("Y/m/d His");
+
+		$sql=$pdo->prepare('insert into calling_log values(?, ?, ?, ?, ?)');
+		$sql->execute([
+			$datetime,
+			null,
+			$device_name,
+			$msg_no,
+			null]);
+		error_log("ログテーブルに書き込み");
+
     //DB接続情報をクリア
     $pdo = null;
   }
