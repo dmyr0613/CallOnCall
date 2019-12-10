@@ -25,10 +25,19 @@
 							echo '<td>', $row['update_datetime'], '</td>';
 							echo '<td>', $row['device_name'], '</td>';
 							echo '<td>', $row['msg_no'], '</td>';
+
+							$logarray = array(
+							    "insert_datetime" => $row['insert_datetime'],
+									"update_datetime" => $row['update_datetime'],
+									"device_name" => $row['device_name'],
+									"msg_no" => $row['msg_no'],
+							);
 						}
 						echo '</table>';
 						echo '<input type="submit" class="button primary small" value="CSV出力">';
 						echo '</form>';
+
+						error_log($logarray);
 					?>
 				</section>
 

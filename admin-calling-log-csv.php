@@ -2,7 +2,7 @@
 
 // 出力情報の設定
 header("Content-Type: application/octet-stream");
-header("Content-Disposition: attachment; filename=GRAYCODE.csv");
+header("Content-Disposition: attachment; filename=CallingLog.csv");
 header("Content-Transfer-Encoding: binary");
 
 // 変数の初期化
