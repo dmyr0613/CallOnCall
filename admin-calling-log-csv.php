@@ -4,6 +4,7 @@
 header("Content-Type: application/octet-stream");
 header("Content-Disposition: attachment; filename=CallingLog.csv");
 header("Content-Transfer-Encoding: binary");
+ini_set('mbstring.internal_encoding' , 'UTF-8');
 
 // // 変数の初期化
 // $member = array();
@@ -38,6 +39,8 @@ header("Content-Transfer-Encoding: binary");
 // foreach( $member as $value ) {
 // 	$csv .= '"' . $value['id'] . '","' . $value['name'] . '", "' . $value['furigana'] . '","' . $value['email'] . '"' . "\n";
 // }
+
+error_log(print_r($_REQUEST, true));
 
 // 変数の初期化
 $csv = null;
