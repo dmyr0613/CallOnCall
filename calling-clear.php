@@ -44,7 +44,6 @@ try{
 		$sqlText  .= '       device_name     = ?,';
 		$sqlText  .= '       kakunin_flg     = 1 ';
     $sqlText  .= ' where kakunin_flg     = 0 ';
-    error_log(print_r($sqlText, true));
     $sql=$pdo->prepare($sqlText);
     $sql->execute([$datetime, $device_name]);
 		error_log("ログテーブルに確認時間を更新");
