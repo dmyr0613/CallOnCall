@@ -26,12 +26,13 @@
 							echo '<td>', $row['device_name'], '</td>';
 							echo '<td>', $row['msg_no'], '</td>';
 
-							$logarray = array(
+							$array = array(
 							    "insert_datetime" => $row['insert_datetime'],
 									"update_datetime" => $row['update_datetime'],
 									"device_name" => $row['device_name'],
 									"msg_no" => $row['msg_no'],
 							);
+							$logarray = array($array);
 						}
 						echo '</table>';
 						echo '<input type="submit" class="button primary small" value="CSV出力">';
