@@ -37,7 +37,8 @@
 						echo '<input type="submit" class="button primary small" value="CSV出力">';
 						echo '</form>';
 
-						error_log($logarray);
+						// error_log($logarray);
+						error_log(print_r($logarray, true));
 					?>
 				</section>
 
