@@ -16,7 +16,7 @@
 						$sql=$pdo->prepare('select * from calling_log order by insert_datetime desc');
 						$sql->execute();
 
-						// echo '<form action="admin-calling-send.php" method="post">';				//送信用のpost
+						echo '<form action="admin-calling-log-csv.php" method="post">';				//送信用のpost
 						echo '<table>';
 						echo '<th>登録時間</th><th>確認時間</th><th>デバイス名</th><th>メッセージNo</th>';
 						foreach ($sql as $row) {
@@ -27,8 +27,8 @@
 							echo '<td>', $row['msg_no'], '</td>';
 						}
 						echo '</table>';
-						// echo '<input type="submit" class="button primary small" value="Register">';
-						// echo '</form>';
+						echo '<input type="submit" class="button primary small" value="CSV出力">';
+						echo '</form>';
 					?>
 				</section>
 
