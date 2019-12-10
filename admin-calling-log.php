@@ -38,7 +38,7 @@
 						}
 						echo '</table>';
 						// echo '<input type="submit" class="button primary small" name="' . $logarray . '" value="CSV出力">';
-						echo '<input type="hidden" name="foo[foo]" value="'. $logarray '."/>';
+						echo '<input type="hidden" name="foo[foo]" value="' . $logarray . '"/>';
 						echo '<button type="submit" class="button primary small" >CSV出力</button>';
 						echo '</form>';
 
