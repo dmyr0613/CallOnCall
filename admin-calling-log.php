@@ -37,7 +37,7 @@
 							$logarray = array($array);
 						}
 						echo '</table>';
-						echo '<input type="submit" class="button primary small" value="CSV出力">';
+						echo '<input type="submit" class="button primary small" name="' . $logarray . '" value="CSV出力">';
 						echo '</form>';
 
 						// error_log($logarray);
