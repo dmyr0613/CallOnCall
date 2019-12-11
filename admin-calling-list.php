@@ -27,7 +27,7 @@
 							echo '<td>', $row['comment'], '</td>';
 						}
 						echo '</table>';
-						echo '<input type="submit" class="button primary small" value="Register">';
+						echo '<input type="submit" class="button primary" value="Register">';
 						echo '</form>';
 						// echo '<p>';
 						// echo '<input type="button" value="メッセージPUSH送信開始" id="startcount" onclick="startShowing();">';
