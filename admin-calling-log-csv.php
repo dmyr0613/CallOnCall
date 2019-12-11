@@ -53,7 +53,10 @@ $csv = '"登録時間","確認時間","デバイス名","メッセージNo"' . "
 if (!empty($_REQUEST)) {
 	$obj = $_REQUEST;
 	foreach ($obj as $key => $val){
-		$csv .= '"' . $value['insert_datetime'] . '","' . $value['update_datetime'] . '", "' . $value['device_name'] . '","' . $value['msg_no'] . '"' . "\n";
+		error_log($val);
+		error_log(print_r($val, true));
+
+		$csv .= '"' . $val['insert_datetime'] . '","' . $val['update_datetime'] . '", "' . $val['device_name'] . '","' . $val['msg_no'] . '"' . "\n";
 	}
 }
 
