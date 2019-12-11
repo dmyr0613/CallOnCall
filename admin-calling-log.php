@@ -38,7 +38,8 @@
 						}
 						echo '</table>';
 						// echo '<input type="submit" class="button primary small" name="' . $logarray . '" value="CSV出力">';
-						echo '<input type="hidden" name="' . $logarray . '" value="' . $logarray . '"/>';
+						// echo '<input type="hidden" name="' . $logarray . '" value="' . $logarray . '"/>';
+						echo '<input type="hidden" name="test" value="<?=htmlspecialchars(implode(',', ' . $logarray . '), ENT_COMPAT | ENT_HTML401, 'UTF-8')?>"';
 						echo '<button type="submit" class="button primary small" >CSV出力</button>';
 						echo '</form>';
 
