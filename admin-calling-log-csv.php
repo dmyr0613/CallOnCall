@@ -4,7 +4,6 @@
 header("Content-Type: application/octet-stream");
 header("Content-Disposition: attachment; filename=CallingLog.csv");
 header("Content-Transfer-Encoding: binary");
-// ini_set('mbstring.internal_encoding' , 'UTF-8');
 
 // // 変数の初期化
 // $member = array();
@@ -40,25 +39,29 @@ header("Content-Transfer-Encoding: binary");
 // 	$csv .= '"' . $value['id'] . '","' . $value['name'] . '", "' . $value['furigana'] . '","' . $value['email'] . '"' . "\n";
 // }
 
-error_log($_REQUEST);
-error_log(print_r($_REQUEST, true));
+
 
 // 変数の初期化
 $csv = null;
-
 // 1行目のラベルを作成
 $csv = '"登録時間","確認時間","デバイス名","メッセージNo"' . "\n";
 
-// 出力データ生成
-if (!empty($_REQUEST)) {
-	$obj = $_REQUEST;
-	foreach ($obj as $key => $val){
-		error_log($val);
-		error_log(print_r($val, true));
-
-		$csv .= '"' . $val['insert_datetime'] . '","' . $val['update_datetime'] . '", "' . $val['device_name'] . '","' . $val['msg_no'] . '"' . "\n";
-	}
+$sql=$pdo->prepare('select * from calling_log order by insert_datetime desc');
+$sql->execute();
+foreach ($sql as $row) {
+	$csv .= '"' . $row['insert_datetime'] . '","' . $row['update_datetime'] . '", "' . $row['device_name'] . '","' . $row['msg_no'] . '"' . "\n";
 }
+
+// // 出力データ生成
+// if (!empty($_REQUEST)) {
+// 	$obj = $_REQUEST;
+// 	foreach ($obj as $key => $val){
+// 		error_log($val);
+// 		error_log(print_r($val, true));
+//
+// 		$csv .= '"' . $val['insert_datetime'] . '","' . $val['update_datetime'] . '", "' . $val['device_name'] . '","' . $val['msg_no'] . '"' . "\n";
+// 	}
+// }
 
 // CSVファイル出力
 // mb_language('Japanese');
