@@ -3,7 +3,7 @@
 // 出力情報の設定
 header("Content-Type: application/octet-stream");
 header("Content-Disposition: attachment; filename=CallingLog.csv");
-// header("Content-Transfer-Encoding: binary");
+header("Content-Transfer-Encoding: binary");
 // ini_set('mbstring.internal_encoding' , 'UTF-8');
 
 // // 変数の初期化
@@ -61,5 +61,6 @@ if (!empty($_REQUEST)) {
 }
 
 // CSVファイル出力
+$csv = mb_convert_encoding($csv,"utf-8","sjis");
 echo $csv;
 return;
