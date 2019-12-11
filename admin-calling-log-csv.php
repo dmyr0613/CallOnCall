@@ -39,7 +39,13 @@ header("Content-Transfer-Encoding: binary");
 // 	$csv .= '"' . $value['id'] . '","' . $value['name'] . '", "' . $value['furigana'] . '","' . $value['email'] . '"' . "\n";
 // }
 
+// global $pdo;
+// Kaimeido Heroku PostgresSQL
+$dsn = 'pgsql:dbname=d8qp7bgte2p1ue host=ec2-174-129-254-249.compute-1.amazonaws.com port=5432';
+$user = 'crridrugfblfyo';
+$password = '345e1a510b468c26ac2149fa0d42d2b947fe8a762a34c89c027a906539cd0895';
 
+$pdo = new PDO($dsn, $user, $password);
 
 // 変数の初期化
 $csv = null;
