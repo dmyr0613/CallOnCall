@@ -39,7 +39,17 @@ header("Content-Transfer-Encoding: binary");
 // 	$csv .= '"' . $value['id'] . '","' . $value['name'] . '", "' . $value['furigana'] . '","' . $value['email'] . '"' . "\n";
 // }
 
-// global $pdo;
+// // 出力データ生成
+// if (!empty($_REQUEST)) {
+// 	$obj = $_REQUEST;
+// 	foreach ($obj as $key => $val){
+// 		error_log($val);
+// 		error_log(print_r($val, true));
+//
+// 		$csv .= '"' . $val['insert_datetime'] . '","' . $val['update_datetime'] . '", "' . $val['device_name'] . '","' . $val['msg_no'] . '"' . "\n";
+// 	}
+// }
+
 // Kaimeido Heroku PostgresSQL
 $dsn = 'pgsql:dbname=d8qp7bgte2p1ue host=ec2-174-129-254-249.compute-1.amazonaws.com port=5432';
 $user = 'crridrugfblfyo';
@@ -58,19 +68,8 @@ foreach ($sql as $row) {
 	$csv .= '"' . $row['insert_datetime'] . '","' . $row['update_datetime'] . '", "' . $row['device_name'] . '","' . $row['msg_no'] . '"' . "\n";
 }
 
-// // 出力データ生成
-// if (!empty($_REQUEST)) {
-// 	$obj = $_REQUEST;
-// 	foreach ($obj as $key => $val){
-// 		error_log($val);
-// 		error_log(print_r($val, true));
-//
-// 		$csv .= '"' . $val['insert_datetime'] . '","' . $val['update_datetime'] . '", "' . $val['device_name'] . '","' . $val['msg_no'] . '"' . "\n";
-// 	}
-// }
+echo mb_convert_encoding($csv,"SJIS", "UTF-8");
 
 // CSVファイル出力
-// mb_language('Japanese');
-// $csv = mb_convert_encoding($csv,"utf-8","sjis");
 echo $csv;
 return;
