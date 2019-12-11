@@ -61,6 +61,7 @@ if (!empty($_REQUEST)) {
 }
 
 // CSVファイル出力
+mb_language('Japanese');
 $csv = mb_convert_encoding($csv,"utf-8","sjis");
 echo $csv;
 return;
