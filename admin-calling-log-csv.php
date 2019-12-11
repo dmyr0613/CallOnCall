@@ -60,7 +60,8 @@ $pdo = new PDO($dsn, $user, $password);
 // 変数の初期化
 $csv = null;
 // 1行目のラベルを作成
-$csv = '"登録時間","確認時間","デバイス名","メッセージNo"' . "\n";
+// $csv = '"登録時間","確認時間","デバイス名","メッセージNo"' . "\n";
+$csv = '"insert_datetime","update_datetime","device_name","msg_no"' . "\n";
 
 $sql=$pdo->prepare('select * from calling_log order by insert_datetime desc');
 $sql->execute();
@@ -68,8 +69,7 @@ foreach ($sql as $row) {
 	$csv .= '"' . $row['insert_datetime'] . '","' . $row['update_datetime'] . '", "' . $row['device_name'] . '","' . $row['msg_no'] . '"' . "\n";
 }
 
-echo mb_convert_encoding($csv,"SJIS", "UTF-8");
-
+// echo mb_convert_encoding($csv,"SJIS", "UTF-8");
 // CSVファイル出力
 echo $csv;
 return;
