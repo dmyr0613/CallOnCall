@@ -28,23 +28,23 @@
 							echo '<td>', $row['device_name'], '</td>';
 							echo '<td>', $row['msg_no'], '</td>';
 
-							$array = array(
-							    "insert_datetime" => $row['insert_datetime'],
-									"update_datetime" => $row['update_datetime'],
-									"device_name" => $row['device_name'],
-									"msg_no" => $row['msg_no'],
-							);
-							$logarray = array($array);
+							// $array = array(
+							//     "insert_datetime" => $row['insert_datetime'],
+							// 		"update_datetime" => $row['update_datetime'],
+							// 		"device_name" => $row['device_name'],
+							// 		"msg_no" => $row['msg_no'],
+							// );
+							// $logarray = array($array);
 						}
 						echo '</table>';
 						// echo '<input type="submit" class="button primary small" name="' . $logarray . '" value="CSV出力">';
 						// echo '<input type="hidden" name="' . $logarray . '" value="' . $logarray . '"/>';
-						echo '<input type="hidden" name="test" value="' . $logarray . '"/>';
-						echo '<button type="submit" class="button primary small" >CSV出力</button>';
+						// echo '<input type="hidden" name="test" value="' . $logarray . '"/>';
+						echo '<button type="submit" class="button primary" >CSV出力</button>';
 						echo '</form>';
 
 						// error_log($logarray);
-						error_log(print_r($logarray, true));
+						// error_log(print_r($logarray, true));
 					?>
 				</section>
 
