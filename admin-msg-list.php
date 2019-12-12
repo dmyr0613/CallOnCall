@@ -33,7 +33,7 @@
 						echo '<td>', $msg_no, '</td>';
 						echo '<td><input type="text" name="msg_no_' . $msg_no . '" value=""></td>';
 						echo '</table>';
-						echo '<input type="submit" class="button primary small" value="Register">';
+						echo '<input type="submit" class="button primary" value="Register">';
 						echo '</form>';
 
 					?>
