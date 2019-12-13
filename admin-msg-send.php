@@ -67,7 +67,23 @@
 								$response = curl_exec($ch);
 								curl_close($ch);
 								error_log(print_r($response, true));
-							}
+							} elseif (substr_count($key, 'ins_no') == 1) {
+								//文字列にins_noが含まれる場合は追加
+								$msg_no = $_REQUEST['ins_no'];
+								error_log("追加メッセージNo." . $msg_no);
+								$message = $_REQUEST['ins_msg'];
+								error_log($message);
+
+								if ($msg_no > 0 && $message != "") {
+									//webAPIにて、メッセージ更新チェック
+									$url = "http://calloncall.herokuapp.com/calling-msg-check.php?msg_no=" . $msg_no . "&message=" . $message;
+									$ch = curl_init();
+									curl_setopt($ch, CURLOPT_URL, $url);
+
+									$response = curl_exec($ch);
+									curl_close($ch);
+									error_log(print_r($response, true));
+								}
 						}
 
             echo '<p>メッセージを更新しました。</p>';
