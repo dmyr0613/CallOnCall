@@ -65,6 +65,7 @@ http://calloncall.herokuapp.com/calling-set.php?device_name=acer_T02&msg_no=1
 http://calloncall.herokuapp.com/calling-set.php?device_name=&msg_no=9
 --msg_noのクリア
 http://calloncall.herokuapp.com/calling-clear.php?device_name=dmyr-iPhone6s
+http://calloncall.herokuapp.com/calling-clear.php?device_name=acer_T02
 --レコード削除
 http://calloncall.herokuapp.com/calling-delete.php?device_name=test
 --call_message
