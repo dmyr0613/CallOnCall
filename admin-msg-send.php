@@ -39,7 +39,7 @@
 
 							if (substr_count($key, 'mod_') == 1) {
 								//文字列にmod_が含まれる場合は修正
-								$msg_no = substr($key, 5);	//メッセージNoを抜き取る。
+								$msg_no = substr($key, 4);	//メッセージNoを抜き取る。
 								error_log("修正メッセージNo." . $msg_no);
 								$message = $_REQUEST['msg_no_' . $msg_no];
 								error_log($message);
@@ -57,7 +57,7 @@
 								}
 							} elseif (substr_count($key, 'del_') == 1) {
 								//文字列にmod_が含まれる場合は削除
-								$msg_no = substr($key, 5);	//メッセージNoを抜き取る。
+								$msg_no = substr($key, 4);	//メッセージNoを抜き取る。
 								error_log("削除メッセージNo." . $msg_no);
 
 							}
