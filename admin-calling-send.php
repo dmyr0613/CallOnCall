@@ -14,7 +14,7 @@
 
           if (!empty($_REQUEST)) {
 						$obj = $_REQUEST;
-						error_log(print_r($obj, true));
+						// error_log(print_r($obj, true));
 						
 						foreach ($obj as $key => $val){
 							error_log($key);
