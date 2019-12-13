@@ -34,13 +34,14 @@
 							echo '<td>';
 							echo '<input type="checkbox" id="del_' . $msg_no . '" name="del_' . $msg_no . '">';
 							echo '<label for="del_' . $msg_no . '"> </label>';
-							echo '</td>';							
+							echo '</td>';
 						}
 						//追加用のレコード
 						$msg_no = $msg_no + 1;
 						echo '<tr>';
 						echo '<td>', $msg_no, '</td>';
-						echo '<td><input type="text" name="msg_no_' . $msg_no . '" value=""></td>';
+						echo '<td><input type="number" name="msg_no_' . $msg_no . '" value="" class="input_number_only"></td>';
+						// echo '<td><input type="number" name="msg_no_' . $row['device_name'] . '" value="', $row['msg_no'], '" class="input_number_only"></td>';
 						echo '</table>';
 						echo '<input type="submit" class="button primary" value="Register">';
 						echo '</form>';
