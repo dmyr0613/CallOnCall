@@ -18,7 +18,7 @@
 
 						echo '<form action="admin-calling-send.php" method="post">';				//送信用のpost
 						echo '<table>';
-						echo '<h2>メッセージNo入力後、REGISTERボタンにて通知メッセージを送信します。</h2>';
+						echo '<h4>メッセージNo入力後、REGISTERボタンにて通知メッセージを送信します。</h4>';
 						echo '<th>デバイス名</th><th>メッセージNo</th><th>コメント</th>';
 						foreach ($sql as $row) {
 							echo '<tr>';
@@ -44,7 +44,7 @@
 						// echo '</p>';
 						// echo '<p id="PassageArea">(カウントを表示します)</p>';
 
-						echo '<h2>下記ボタンクリックでも通知メッセージを送信します。</h2>';
+						echo '<h4>下記ボタンクリックでも通知メッセージを送信します。</h4>';
 						echo '<p>';
 						echo '<input type="button" value="通知No1" id="sendAlart1" onclick="sendAlart(1);">';
 						echo '　';
