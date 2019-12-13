@@ -91,9 +91,12 @@
 	// アラート送信用
 	function sendAlart(msg_no) {
 
+		console.log(msg_no);
+		
 		//WebAPIを呼び出し
 		var request = new XMLHttpRequest();
-		request.open('GET', 'http://calloncall.herokuapp.com/calling-set.php?device_name=&msg_no=' . msg_no , true);
+		// request.open('GET', 'http://calloncall.herokuapp.com/calling-set.php?device_name=&msg_no=' . msg_no , true);
+		request.open('GET', 'http://calloncall.herokuapp.com/calling-set.php?device_name=&msg_no=101' , true);
 		request.onload = function () {
 			//
 		};
