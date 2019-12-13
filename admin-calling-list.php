@@ -29,10 +29,10 @@
 						echo '</table>';
 						echo '<input type="submit" class="button primary" value="Register">';
 
-						echo '<p>';
-						echo '<input type="hidden" name="msg_no_" value="101"/>';
-						echo '<button type="submit" class="button primary" >アラートNo1</button>';
-						echo '</p>';
+						// echo '<p>';
+						// echo '<input type="hidden" name="msg_no_" value="101"/>';
+						// echo '<button type="submit" class="button primary" >アラートNo1</button>';
+						// echo '</p>';
 
 						echo '</form>';
 
@@ -42,6 +42,11 @@
 				    // echo '<input type="button" value="停止" id="endcount" onclick="stopShowing();">';
 						// echo '</p>';
 						// echo '<p id="PassageArea">(カウントを表示します)</p>';
+
+						echo '<p>';
+						echo '<input type="button" value="アラートNo1" id="sendAlart1" onclick="sendAlart();">';
+						echo '</p>';
+						echo '<p id="PassageArea"></p>';
 					?>
 				</section>
 
@@ -81,5 +86,20 @@
 	function stopShowing() {
 	   clearInterval( PassageID );   // タイマーのクリア
 	   document.getElementById("startcount").disabled = false;   // 開始ボタンの有効化
+	}
+
+	// アラート送信用
+	function sendAlart() {
+
+		//WebAPIを呼び出し
+		var request = new XMLHttpRequest();
+		request.open('GET', 'http://calloncall.herokuapp.com/calling-set.php?device_name=&msg_no=101', true);
+		request.onload = function () {
+			//
+		};
+		request.send();
+
+		 var msg = "アラート通知を行いました。";   // 表示文作成
+		 document.getElementById("PassageArea").innerHTML = msg;   // 表示更新
 	}
 </script>
