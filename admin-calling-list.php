@@ -92,6 +92,7 @@
 	function sendAlart(msg_no) {
 
 		console.log(msg_no);
+		console.log("TEST");
 		
 		//WebAPIを呼び出し
 		var request = new XMLHttpRequest();
