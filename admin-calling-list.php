@@ -44,18 +44,29 @@
 						// echo '<p id="PassageArea">(カウントを表示します)</p>';
 
 						echo '<p>';
+						echo '<input type="button" value="通知No1" id="sendAlart1" onclick="sendAlart(1);">';
+						echo '　';
+						echo '<input type="button" value="通知No2" id="sendAlart2" onclick="sendAlart(2);">';
+						echo '　';
+						echo '<input type="button" value="通知No3" id="sendAlart3" onclick="sendAlart(3);">';
+						echo '　';
+						echo '<input type="button" value="通知No4" id="sendAlart4" onclick="sendAlart(4);">';
+						echo '　';
+						echo '<input type="button" value="通知No5" id="sendAlart5" onclick="sendAlart(5);">';
+						echo '</p>';
+						echo '<p>';
 						echo '<input type="button" value="アラートNo1" id="sendAlart1" onclick="sendAlart(101);">';
 						echo '　';
-						echo '<input type="button" value="アラートNo2" id="sendAlart1" onclick="sendAlart(102);">';
+						echo '<input type="button" value="アラートNo2" id="sendAlart2" onclick="sendAlart(102);">';
 						echo '　';
-						echo '<input type="button" value="アラートNo3" id="sendAlart1" onclick="sendAlart(103);">';
+						echo '<input type="button" value="アラートNo3" id="sendAlart3" onclick="sendAlart(103);">';
 						echo '　';
-						echo '<input type="button" value="アラートNo4" id="sendAlart1" onclick="sendAlart(104);">';
+						echo '<input type="button" value="アラートNo4" id="sendAlart4" onclick="sendAlart(104);">';
 						echo '　';
-						echo '<input type="button" value="アラートNo5" id="sendAlart1" onclick="sendAlart(105);">';
+						echo '<input type="button" value="アラートNo5" id="sendAlart5" onclick="sendAlart(105);">';
 						echo '</p>';
+						echo '<p><INPUT TYPE="button" class="button primary" VALUE="再読み込み" onClick="window.location.reload();"></p>';
 						echo '<p id="PassageArea"></p>';
-						 echo '<p><INPUT TYPE="button" VALUE="リロード" onClick="window.location.reload();"></p>';
 					?>
 				</section>
 
