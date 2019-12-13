@@ -17,7 +17,7 @@
 						$sql->execute();
 
 						echo '<form action="admin-calling-send.php" method="post">';				//送信用のpost
-						echo '<table>';
+						echo '<table class="alt">';
 						echo '<th>デバイス名</th><th>メッセージNo</th><th>コメント</th>';
 						foreach ($sql as $row) {
 							echo '<tr>';
@@ -43,6 +43,7 @@
 						// echo '</p>';
 						// echo '<p id="PassageArea">(カウントを表示します)</p>';
 
+						echo '<h3>以下のボタンクリックで通知します。</h3>';
 						echo '<p>';
 						echo '<input type="button" value="通知No1" id="sendAlart1" onclick="sendAlart(1);">';
 						echo '　';
