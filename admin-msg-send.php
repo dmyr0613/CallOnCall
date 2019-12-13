@@ -15,8 +15,7 @@
           if (!empty($_REQUEST)) {
 						$obj = $_REQUEST;
 						foreach ($obj as $key => $val){
-							error_log($key);
-
+							// error_log($key);
 							// if (substr_count($key, 'msg_no_') == 1) {
 							// 	//文字列にmsg_noが含まれる場合
 							// 	$msg_no = substr($key, 7);	//メッセージNoを抜き取る。
@@ -45,7 +44,6 @@
 								error_log($message);
 
 								if ($msg_no > 0 && $message != "") {
-									error_log("メッセージ更新");
 									//webAPIにて、メッセージ更新チェック
 									$url = "http://calloncall.herokuapp.com/calling-msg-check.php?msg_no=" . $msg_no . "&message=" . $message;
 									$ch = curl_init();
@@ -59,7 +57,14 @@
 								//文字列にmod_が含まれる場合は削除
 								$msg_no = substr($key, 4);	//メッセージNoを抜き取る。
 								error_log("削除メッセージNo." . $msg_no);
+								//webAPIにて、メッセージ更新チェック
+								$url = "http://calloncall.herokuapp.com/calling-msg-delete.php?msg_no=" . $msg_no;
+								$ch = curl_init();
+								curl_setopt($ch, CURLOPT_URL, $url);
 
+								$response = curl_exec($ch);
+								curl_close($ch);
+								error_log(print_r($response, true));
 							}
 						}
 
