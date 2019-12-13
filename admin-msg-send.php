@@ -84,6 +84,7 @@
 									curl_close($ch);
 									error_log(print_r($response, true));
 								}
+							}
 						}
 
             echo '<p>メッセージを更新しました。</p>';
