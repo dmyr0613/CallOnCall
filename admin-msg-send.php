@@ -17,10 +17,30 @@
 						foreach ($obj as $key => $val){
 							error_log($key);
 
-							if (substr_count($key, 'msg_no_') == 1) {
-								//文字列にmsg_noが含まれる場合
-								$msg_no = substr($key, 7);	//メッセージNoを抜き取る。
-								error_log($msg_no);
+							// if (substr_count($key, 'msg_no_') == 1) {
+							// 	//文字列にmsg_noが含まれる場合
+							// 	$msg_no = substr($key, 7);	//メッセージNoを抜き取る。
+							// 	error_log($msg_no);
+							// 	$message = $_REQUEST['msg_no_' . $msg_no];
+							// 	error_log($message);
+							//
+							// 	if ($msg_no > 0 && $message != "") {
+							// 		error_log("メッセージ更新");
+							// 		//webAPIにて、メッセージ更新チェック
+							// 		$url = "http://calloncall.herokuapp.com/calling-msg-check.php?msg_no=" . $msg_no . "&message=" . $message;
+							// 		$ch = curl_init();
+							// 		curl_setopt($ch, CURLOPT_URL, $url);
+							//
+							// 		$response = curl_exec($ch);
+							// 		curl_close($ch);
+							// 		error_log(print_r($response, true));
+							// 	}
+							// }
+
+							if (substr_count($key, 'mod_') == 1) {
+								//文字列にmod_が含まれる場合は修正
+								$msg_no = substr($key, 5);	//メッセージNoを抜き取る。
+								error_log("修正メッセージNo." . $msg_no);
 								$message = $_REQUEST['msg_no_' . $msg_no];
 								error_log($message);
 
@@ -35,6 +55,11 @@
 									curl_close($ch);
 									error_log(print_r($response, true));
 								}
+							} elseif (substr_count($key, 'del_') == 1) {
+								//文字列にmod_が含まれる場合は削除
+								$msg_no = substr($key, 5);	//メッセージNoを抜き取る。
+								error_log("削除メッセージNo." . $msg_no);
+
 							}
 						}
 
