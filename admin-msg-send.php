@@ -14,6 +14,8 @@
 
           if (!empty($_REQUEST)) {
 						$obj = $_REQUEST;
+						error_log(print_r($obj, true));
+
 						foreach ($obj as $key => $val){
 							// error_log($key);
 							// if (substr_count($key, 'msg_no_') == 1) {
