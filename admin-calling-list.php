@@ -55,6 +55,7 @@
 						echo '<input type="button" value="アラートNo5" id="sendAlart1" onclick="sendAlart(105);">';
 						echo '</p>';
 						echo '<p id="PassageArea"></p>';
+						 echo '<p><INPUT TYPE="button" VALUE="リロード" onClick="window.location.reload();"></p>';
 					?>
 				</section>
 
@@ -110,6 +111,6 @@
 		 var msg = "アラート通知を行いました。 メッセージNo:" + msg_no;   // 表示文作成
 		 document.getElementById("PassageArea").innerHTML = msg;   // 表示更新
 
-		 location.reload();
+		 // window.location.reload();
 	}
 </script>
