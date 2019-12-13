@@ -44,7 +44,8 @@
 						// echo '<p id="PassageArea">(カウントを表示します)</p>';
 
 						echo '<p>';
-						echo '<input type="button" value="アラートNo1" id="sendAlart1" onclick="sendAlart(109);">';
+						echo '<input type="button" value="アラートNo1" id="sendAlart1" onclick="sendAlart(101);">';
+						echo '<input type="button" value="アラートNo2" id="sendAlart1" onclick="sendAlart(102);">';
 						echo '</p>';
 						echo '<p id="PassageArea"></p>';
 					?>
@@ -88,15 +89,12 @@
 	//    document.getElementById("startcount").disabled = false;   // 開始ボタンの有効化
 	// }
 
-	// アラート送信用
+	// アラート送信用 （引数にmsg_no）
 	function sendAlart(msg_no) {
-
-		console.log(msg_no);
 
 		//WebAPIを呼び出し
 		var request = new XMLHttpRequest();
 		request.open('GET', 'http://calloncall.herokuapp.com/calling-set.php?device_name=&msg_no=' + msg_no , true);
-		// request.open('GET', 'http://calloncall.herokuapp.com/calling-set.php?device_name=&msg_no=101' , true);
 		request.onload = function () {
 			//
 		};
