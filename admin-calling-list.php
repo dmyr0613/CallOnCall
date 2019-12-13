@@ -91,8 +91,8 @@
 	// アラート送信用
 	function sendAlart(msg_no) {
 
-		console.log(msg_no);
-		console.log("TEST");
+		console.debug(msg_no);
+		console.debug("TEST");
 		
 		//WebAPIを呼び出し
 		var request = new XMLHttpRequest();
