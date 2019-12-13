@@ -44,7 +44,7 @@
 						// echo '<p id="PassageArea">(カウントを表示します)</p>';
 
 						echo '<p>';
-						echo '<input type="button" value="アラートNo1" id="sendAlart1" onclick="sendAlart();">';
+						echo '<input type="button" value="アラートNo1" id="sendAlart1" onclick="sendAlart(109);">';
 						echo '</p>';
 						echo '<p id="PassageArea"></p>';
 					?>
@@ -57,43 +57,43 @@
 <?php require 'footer.php'; ?>
 
 <script type="text/javascript">
-	var PassSec;   // 秒数カウント用変数
-
-	// 繰り返し処理の中身
-	function showPassage() {
-
-		//WebAPIを呼び出し（プッシュ通知ALL）
-		var request = new XMLHttpRequest();
-		request.open('GET', 'http://calloncall.herokuapp.com/calling-push-all.php', true);
-		request.onload = function () {
-			//
-		};
-		request.send();
-
-	   PassSec++;   // カウントアップ
-	   var msg = "送信ボタンを押してから " + PassSec + "回 送信しました。";   // 表示文作成
-	   document.getElementById("PassageArea").innerHTML = msg;   // 表示更新
-	}
-
-	// 繰り返し処理の開始
-	function startShowing() {
-	   PassSec = 0;   // カウンタのリセット
-	   PassageID = setInterval('showPassage()',3000);   // タイマーをセット(1000ms間隔)
-	   document.getElementById("startcount").disabled = true;   // 開始ボタンの無効化
-	}
-
-	// 繰り返し処理の中止
-	function stopShowing() {
-	   clearInterval( PassageID );   // タイマーのクリア
-	   document.getElementById("startcount").disabled = false;   // 開始ボタンの有効化
-	}
+	// var PassSec;   // 秒数カウント用変数
+	//
+	// // 繰り返し処理の中身
+	// function showPassage() {
+	//
+	// 	//WebAPIを呼び出し（プッシュ通知ALL）
+	// 	var request = new XMLHttpRequest();
+	// 	request.open('GET', 'http://calloncall.herokuapp.com/calling-push-all.php', true);
+	// 	request.onload = function () {
+	// 		//
+	// 	};
+	// 	request.send();
+	//
+	//    PassSec++;   // カウントアップ
+	//    var msg = "送信ボタンを押してから " + PassSec + "回 送信しました。";   // 表示文作成
+	//    document.getElementById("PassageArea").innerHTML = msg;   // 表示更新
+	// }
+	//
+	// // 繰り返し処理の開始
+	// function startShowing() {
+	//    PassSec = 0;   // カウンタのリセット
+	//    PassageID = setInterval('showPassage()',3000);   // タイマーをセット(1000ms間隔)
+	//    document.getElementById("startcount").disabled = true;   // 開始ボタンの無効化
+	// }
+	//
+	// // 繰り返し処理の中止
+	// function stopShowing() {
+	//    clearInterval( PassageID );   // タイマーのクリア
+	//    document.getElementById("startcount").disabled = false;   // 開始ボタンの有効化
+	// }
 
 	// アラート送信用
-	function sendAlart() {
+	function sendAlart(msg_no) {
 
 		//WebAPIを呼び出し
 		var request = new XMLHttpRequest();
-		request.open('GET', 'http://calloncall.herokuapp.com/calling-set.php?device_name=&msg_no=101', true);
+		request.open('GET', 'http://calloncall.herokuapp.com/calling-set.php?device_name=&msg_no=' . msg_no , true);
 		request.onload = function () {
 			//
 		};
