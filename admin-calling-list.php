@@ -28,12 +28,13 @@
 						}
 						echo '</table>';
 						echo '<input type="submit" class="button primary" value="Register">';
-						echo '</form>';
 
 						echo '<p>';
 						echo '<input type="hidden" name="msg_no_" value="101"/>';
 						echo '<button type="submit" class="button primary" >アラートNo1</button>';
 						echo '</p>';
+
+						echo '</form>';
 
 						// echo '<p>';
 						// echo '<input type="button" value="メッセージPUSH送信開始" id="startcount" onclick="startShowing();">';
