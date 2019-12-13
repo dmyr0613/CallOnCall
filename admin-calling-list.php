@@ -45,7 +45,14 @@
 
 						echo '<p>';
 						echo '<input type="button" value="アラートNo1" id="sendAlart1" onclick="sendAlart(101);">';
+						echo '　';
 						echo '<input type="button" value="アラートNo2" id="sendAlart1" onclick="sendAlart(102);">';
+						echo '　';
+						echo '<input type="button" value="アラートNo3" id="sendAlart1" onclick="sendAlart(103);">';
+						echo '　';
+						echo '<input type="button" value="アラートNo4" id="sendAlart1" onclick="sendAlart(104);">';
+						echo '　';
+						echo '<input type="button" value="アラートNo5" id="sendAlart1" onclick="sendAlart(105);">';
 						echo '</p>';
 						echo '<p id="PassageArea"></p>';
 					?>
