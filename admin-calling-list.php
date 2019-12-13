@@ -119,7 +119,7 @@
 		};
 		request.send();
 
-		 var msg = "アラート通知を行いました。 メッセージNo:" + msg_no;   // 表示文作成
+		 var msg = "通知を行いました。 メッセージNo:" + msg_no;   // 表示文作成
 		 document.getElementById("PassageArea").innerHTML = msg;   // 表示更新
 
 		 // window.location.reload();

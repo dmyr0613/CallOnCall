@@ -19,13 +19,22 @@
 
 						echo '<form action="admin-msg-send.php" method="post">';				//送信用のpost
 						echo '<table>';
-						echo '<th>メッセージNo</th><th>メッセージ</th>';
+						echo '<th>メッセージNo</th><th>メッセージ</th><th>修正</th><th>削除</th>';
 						foreach ($sql as $row) {
 							$msg_no = $row['msg_no'];
 							echo '<tr>';
 							echo '<td>', $msg_no, '</td>';
 							// 一意にするため、nameにデバイス名を付加する。　
 							echo '<td><input type="text" name="msg_no_' . $msg_no . '" value="', $row['message'], '"></td>';
+
+							echo '<td>';
+							echo '<input type="checkbox" id="mod_' . $msg_no . '" name="mod_' . $msg_no . '">';
+							echo '<label for="mod_' . $msg_no . '"> </label>';
+							echo '</td>';
+							echo '<td>';
+							echo '<input type="checkbox" id="del_' . $msg_no . '" name="del_' . $msg_no . '">';
+							echo '<label for="del_' . $msg_no . '"> </label>';
+							echo '</td>';							
 						}
 						//追加用のレコード
 						$msg_no = $msg_no + 1;
