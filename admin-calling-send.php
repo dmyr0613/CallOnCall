@@ -14,6 +14,7 @@
 
           if (!empty($_REQUEST)) {
 						$obj = $_REQUEST;
+						error_log($obj);
 						foreach ($obj as $key => $val){
 							error_log($key);
 
