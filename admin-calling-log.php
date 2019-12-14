@@ -19,6 +19,7 @@
 						$logarray = array();
 
 						echo '<form action="admin-calling-log-csv.php" method="post">';				//送信用のpost
+						echo '<button type="submit" class="button primary" >CSV出力</button>';
 						echo '<table>';
 						echo '<th>登録時間</th><th>確認時間</th><th>デバイス名</th><th>メッセージNo</th>';
 						foreach ($sql as $row) {
