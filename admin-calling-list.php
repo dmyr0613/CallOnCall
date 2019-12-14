@@ -67,6 +67,7 @@
 						echo '　';
 						echo '<input type="button" value="アラートNo5" id="sendAlart5" onclick="sendAlart(105);">';
 						echo '</p>';
+						echo '<h4>下記ボタンクリックでページを再読み込みします。</h4>';
 						echo '<p><INPUT TYPE="button" class="button primary" VALUE="再読み込み" onClick="window.location.reload();"></p>';
 						echo '<p id="PassageArea"></p>';
 					?>
