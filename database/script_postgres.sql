@@ -10,6 +10,8 @@ insert into calling values('dmyr-iPhone-SE', 0, 'MEGU', '9c2513bb13c47947aaeb3ba
 insert into calling values('Maulana', 0, 'ArifMaulana', '7d417d3a7dc8a188f2d73708037b43db6f1f637b338d46fc72f302432e0f6b28');
 
 insert into calling values('TEST', 0, 'TEST', '12345');
+insert into calling values('generic_x86', 3, 'generic_x86', '12345');
+
 
 update calling set msg_no = 1 where device_name = 'dmyr-iPhone6s';
 
