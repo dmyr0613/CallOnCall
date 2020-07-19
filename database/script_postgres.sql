@@ -393,3 +393,6 @@ http://calloncall.herokuapp.com/calling-msg-check.php?msg_no=1&message=TEST
 http://calloncall.herokuapp.com/push_calling.php?token=851fd0ba8b728b47d765f2d2bc90140474d5bb0c945606734c5e07d8dd40abc0&msg_no=1&message=TEST
 --プッシュ通知ALL
 http://calloncall.herokuapp.com/calling-push-all.php
+
+--GHKitで音声再生
+http://calloncall.herokuapp.com/push_calling_fb3.php?message="テスト"

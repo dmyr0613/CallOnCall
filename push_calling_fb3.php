@@ -9,7 +9,7 @@ try{
 		$options = '{';
 		$options = $options . '  "ghkit":"hekuu759kh",';
 		$options = $options . '  "code":"235684",';
-		$options = $options . '  "message":"サーバからメッセージを送信"';
+		$options = $options . '  "message":"' . $alert . '"';
 		$options = $options . '}';
 
 		$ch = curl_init();
