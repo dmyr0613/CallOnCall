@@ -395,4 +395,4 @@ http://calloncall.herokuapp.com/push_calling.php?token=851fd0ba8b728b47d765f2d2b
 http://calloncall.herokuapp.com/calling-push-all.php
 
 --GHKitで音声再生
-http://calloncall.herokuapp.com/push_calling_fb3.php?message="テスト"
+http://calloncall.herokuapp.com/push_calling_fb3.php?message='テスト'
